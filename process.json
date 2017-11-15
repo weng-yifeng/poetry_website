@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "poetry_website",
+            "script": "bin/www",
+            "log_date_format": "YYYY-MM-DD HH:mm:SS",
+            "log_file": "logs/poetry_w.log",
+            "error_file": "logs/poetry_w-err.log",
+            "out_file": "logs/app1.pid",
+            "exec_mode": "cluster_mode",
+            "watch": true
+        }
+    ]
+}
