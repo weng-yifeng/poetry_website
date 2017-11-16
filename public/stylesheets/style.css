@@ -1,8 +1,30 @@
+html{
+  width: 100%;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+nav{
+  padding-top: 10px;
+  width: 100%;
+  height:50px;
+  background-color:wheat;
+}
+
+.leftWord{
+  background-color: burlywood;
+}
+
+#searchBtn{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/searchPic.png");
+  background-size: 100%;
 }
