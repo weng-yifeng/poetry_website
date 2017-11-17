@@ -11,14 +11,21 @@ a {
 }
 
 nav{
-  padding-top: 10px;
   width: 100%;
   height:50px;
+  line-height: 50px;
   background-color:wheat;
 }
 
-.leftWord{
+.left-word{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
   background-color: burlywood;
+}
+
+.search-box{
+  display: inline-block;
 }
 
 #searchBtn{
@@ -27,4 +34,128 @@ nav{
   height: 20px;
   background-image: url("../images/searchPic.png");
   background-size: 100%;
+  border:1px solid black;
+}
+
+.search{
+  font-size: 16px;
+  border: none;
+}
+
+
+
+
+
+
+
+
+#imageCarousel {
+  margin: 50px auto;
+  width: 80%;/* 900px; */
+  height: 500px;
+  border: 3px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+#pic {
+  /* 7个图片尺寸900*7 */
+  position: absolute;
+  width: 700%;  /* 6300px */
+  height: 100%;
+  left: -100%;
+  z-index: 1;
+}
+
+#pic img {
+  float: left;
+}
+
+#buttons {
+  position: absolute;
+  height:12.45%;
+  width: 30%;
+  left: 35%;
+  bottom: 5.5%;
+  z-index: 2;
+}
+
+#buttons span {
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6%;
+  height: 40%;
+  background: white;
+  border-radius: 50%;
+  margin-left: 8.3%;
+  /* opacity: 0.7; */
+}
+
+.unon{
+  opacity: 0.6;
+}
+
+.on {
+  opacity: 1;
+}
+
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 80px; /* 用媒体查询自适应 */
+  font-weight: 900;
+  top: 40%;
+  color: white;
+  text-shadow:3px 3px 3px #162866;
+  opacity: 0.7;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+#imageCarousel:hover .arrow {
+  display: block;
+}
+
+#pre {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}
+
+
+@media (max-width: 992px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 60px;
+  }
+
+}
+
+@media (max-width: 500px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 300px){
+  /* 轮播箭头大小 */
+  .arrow{
+    font-size: 25px;
+  }
+
 }
