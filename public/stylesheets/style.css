@@ -10,28 +10,22 @@ a {
   color: #00B7FF;
 }
 
-/*导航部分开始*/
 nav{
   width: 100%;
   height:50px;
   line-height: 50px;
-  /*background-color:wheat;*/
-  border-bottom: 1px solid gray;
+  background-color:wheat;
 }
 
 .left-word{
   margin-left: 20px;
   margin-right: 20px;
   font-size: 16px;
-  /*background-color: burlywood;*/
+  background-color: burlywood;
 }
 
 .search-box{
   display: inline-block;
-  width: 180px;
-  height: 28px;
-  line-height: 28px;
-  border-bottom: 1px solid gray;
 }
 
 #searchBtn{
@@ -40,57 +34,24 @@ nav{
   height: 20px;
   background-image: url("../images/searchPic.png");
   background-size: 100%;
-  /*border:1px solid black;*/
-  /*top:50%;*/
-  transform: translateY(30%);
+  border:1px solid black;
 }
 
 .search{
-  width: 150px;
   font-size: 16px;
   border: none;
 }
 
-#login,#signUp{
-  font-size: 16px;
-  float: right;
-  padding: 5px;
-  line-height:13px;
-  /*top:50%;*/
-  transform: translateY(50%);
-  margin-right: 20px;
-  border:1px solid gray;
-}
 
-/*导航部分结束*/
 
-/*大标题部分开始*/
-.header{
 
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
 
-.header p{
-  font-size: 40px;
-}
 
-#writing{
-  margin: 10px auto;
-  padding: 5px;
-  width: 65px;
-  font-size: 18px;
-  border-radius: 10px;
-  background-color: #75D081;
-}
 
-/*大标题部分结束*/
 
-/*轮播图部分开始*/
 #imageCarousel {
-  margin: 20px auto;
-  width: 88%;/* 900px; */
+  margin: 50px auto;
+  width: 80%;/* 900px; */
   height: 500px;
   border: 3px solid #333;
   border-radius: 5px;
@@ -142,6 +103,7 @@ nav{
   opacity: 1;
 }
 
+
 .arrow {
   position: absolute;
   z-index: 2;
@@ -173,59 +135,7 @@ nav{
   right: 20px;
 }
 
-/*轮播图部分结束*/
 
-
-/*最新诗歌部分开始*/
-.newest{
-  margin-top: 30px;
-  text-align: center;
-}
-.newest p{
-  font-size: 20px;
-}
-
-.contain{
-  display: inline-block;
-  width: 90%;
-  height: 500px;
-}
-
-.contain div{
-  display: inline-block;
-  width:22%;
-  height: 50%;
-  margin: 10px;
-  border: 1px solid gray;
-  overflow: hidden;
-
-}
-
-.contain h1{
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size:20px;
-}
-
-.contain h2{
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.contain p{
-  font-size: 15px;
-  line-height: 30px;
-  letter-spacing: 2px;
-}
-
-.contain p:after{
-
-}
-
-/*最新诗歌部分结束*/
-
-
-/*媒体查询部分开始*/
 @media (max-width: 992px){
   /* 轮播箭头大小 */
   .arrow{
@@ -249,5 +159,3 @@ nav{
   }
 
 }
-
-/*媒体查询部分结束*/
