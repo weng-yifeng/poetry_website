@@ -31,7 +31,7 @@ router.post('/register', function(req, res, next) {
         console.log("create user error");
         res.json({
           code: 1,
-          message: "create user error",
+          message: err,
         });
       }
       res.json({
