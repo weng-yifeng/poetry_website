@@ -102,7 +102,7 @@ $(document).ready(function(e) {
     function start() {
         autorun = setInterval(function () {
             $next.click();
-        },2500);
+        },4000);
     }
 //停止自动播放
     function stop () {
@@ -123,6 +123,106 @@ $(document).ready(function(e) {
 
 
 
+// 诗友大轮播图部分开始
+//获取整个轮播图大div
+    var $imageCarousel_ul = $('#imageCarousel_ul');
+//获取图片集合
+    var $tuijian = $('#tuijian');
+//获取左箭头
+    var $pre_2 = $('#pre_2');
+//获取右箭头
+    var $next_2 = $('#next_2');
+
+    function win_width() {
+        var wWidth = $(window).width();//获取可视区域高度
+        //设置轮播图高度为宽度的0.5
+        if(wWidth > 500) {
+            $imageCarousel_ul.height($imageCarousel_ul.width() * 0.2);
+        } else if(wWidth <= 500 && wWidth>260){
+            $imageCarousel_ul.height($imageCarousel_ul.width() * 0.25);
+        } else if(wWidth <= 260){
+            $imageCarousel_ul.height($imageCarousel_ul.width() * 0.35);
+        }
+    }
+    win_width();
+// // 设置每张图片的宽度和轮播框一样
+// $tuijian.children().width($imageCarousel_ul.width());
+
+//箭头点击触发然后tuijian改变左距离
+    function move2(change) {
+        //定义每次移动后的Left值，change为一张图片宽度
+        var Left = tuijian.offsetLeft + change;
+        //设置定时器让图片运动切换
+        var speed = change;//每次移动的距离，分5次移动；
+        run();
+        //定时器
+        function run () {
+            if ( (speed > 0 && tuijian.offsetLeft < Left)
+                || (speed < 0 && tuijian.offsetLeft > Left)) {
+                //分5次改变left值，直到满足切换条件
+                $tuijian.css('left', tuijian.offsetLeft + speed);
+                //超时定时器
+                setTimeout(run,100);//每次运动间隔时间，所以切换一张图片运动时间为5*50=250毫秒
+            } else {
+                //切换图片
+                $tuijian.css('left',Left);
+                //当left变到不恰当范围的时候，把left变回范围内
+                if (Left > ($imageCarousel_ul.width()*(-1))) {
+                    $tuijian.css('left',$imageCarousel_ul.width()*(-5));
+                }
+                if (Left < ($imageCarousel_ul.width()*(-5))) {
+                    $tuijian.css('left',$imageCarousel_ul.width()*(-1));
+                }
+            }
+        }
+    }
+
+//右箭头点击触发然后tuijian改变左距离
+    $next_2.on('click', function () {
+        move2($imageCarousel_ul.width()*(-1));
+    });
+
+//左箭头点击触发然后tuijian改变左距离
+    $pre_2.on('click', function () {
+        move2($imageCarousel_ul.width());
+    });
+
+//声明变量，用来自动播放
+    var autorun_2;
+//自动播放函数
+    function start_2() {
+        autorun_2 = setInterval(function () {
+            $next_2.click();
+        },5000);
+    }
+//停止自动播放
+    function stop_2 () {
+        clearInterval(autorun_2);
+    }
+//鼠标移到图片轮播区域就停止自动播放
+    $imageCarousel_ul.on('mouseover',function () {
+        stop_2();
+    });
+    $next_2.on('mouseover',function () {
+        stop_2();
+    });
+    $pre_2.on('mouseover',function () {
+        stop_2();
+    });
+//鼠标移出图片轮播区域就开始自动播放
+    $imageCarousel_ul.on('mouseout',function () {
+        start_2();
+    });
+    $next_2.on('mouseout',function () {
+        start_2();
+    });
+    $pre_2.on('mouseout',function () {
+        start_2();
+    });
+
+    start_2();
+
+// 诗友大轮播图部分结束
 
 
 

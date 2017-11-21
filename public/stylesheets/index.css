@@ -262,12 +262,114 @@ nav{
 /*推荐诗友部分开始*/
 .commend{
   margin-top: 10px;
+  text-align: center;
 }
+
+.commend h1{
+  font-size:20px;
+}
+
+/*推荐诗友轮播图部分开始*/
+.tuijian-run{
+  position: relative;
+  width: 90%;
+  margin:10px auto;
+}
+
+#imageCarousel_ul {
+  margin: 50px auto;
+  width: 80%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  /*border: 1px solid red;*/
+}
+
+#tuijian {
+  /* 7个图片尺寸900*7 */
+  position: absolute;
+  width: 700%;  /* 6300px */
+  height: 100%;
+  left: -100%;
+  z-index: 1;
+  /* text-align: center; */
+  font-size: 0;
+}
+
+#tuijian ul{
+  display: inline-block;
+  width: 14.28%;
+  height: 100%;
+  /*border: 1px solid blue;*/
+  text-align: center;
+}
+
+#tuijian li {
+  display: inline-block;
+  width: 20%;
+  /*border: 1px solid pink;*/
+}
+
+#tuijian li p{
+  font-size: 18px;
+}
+
+#tuijian img {
+   width: 70%;
+   border-radius: 50%;
+}
+
+.arrow-2 {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  display: block;/* none;  */
+  text-decoration: none;
+  text-align: center;
+  font-size: 80px; /* 用媒体查询自适应 */
+  font-weight: 900;
+  top: 10%;
+  color: snow;
+  text-shadow:3px 3px 3px #162866;
+  opacity: 0.7;
+}
+
+.arrow-2:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#pre_2 {
+  left: 0;
+}
+
+#next_2 {
+  right: 0;
+}
+
+/*推荐诗友轮播图部分结束*/
+
+
+/*footer部分开始*/
+footer{
+  text-align: center;
+}
+
+footer hr{
+  margin-top: 50px;
+  width:90%;
+}
+
+footer h1{
+  margin: 50px;
+  font-size: 20px;
+}
+/*footer部分结束*/
 
 /*媒体查询部分开始*/
 @media (max-width: 992px){
   /* 轮播箭头大小 */
-  .arrow{
+  .arrow ,.arrow-2{
     font-size: 60px;
   }
 
@@ -275,15 +377,22 @@ nav{
 
 @media (max-width: 992px){
   /* 轮播箭头大小 */
-  .arrow{
+  .arrow ,.arrow-2{
     font-size: 60px;
+  }
+  #tuijian li p{
+    font-size: 15px;
   }
 }
 
 @media (max-width: 800px){
   /* 轮播箭头大小 */
-  .arrow{
+  .arrow ,.arrow-2{
     font-size: 55px;
+  }
+
+  #tuijian li p {
+    font-size: 12px;
   }
 
   .contain{
@@ -296,9 +405,15 @@ nav{
 
 @media (max-width: 650px){
   /* 轮播箭头大小 */
-  .arrow{
+  .arrow ,.arrow-2{
     font-size: 50px;
   }
+
+  #tuijian li p {
+    font-size: 10px;
+     -webkit-transform: scale(0.90);
+  }
+
   .contain li{
     width: 40%;
   }
@@ -309,9 +424,13 @@ nav{
     font-size: 35px;
   }
   /* 轮播箭头大小 */
-  .arrow{
+  .arrow ,.arrow-2{
     font-size: 40px;
   }
+  #tuijian li p {
+   font-size: 8px;
+   -webkit-transform: scale(0.80);
+ }
   .contain li{
     width: 60%;
   }
@@ -323,8 +442,12 @@ nav{
     font-size: 30px;
   }
   /* 轮播箭头大小 */
-  .arrow{
+  .arrow ,.arrow-2{
     font-size: 25px;
+  }
+  #tuijian li p {
+    font-size: 8px;
+    -webkit-transform: scale(0.60);
   }
   .contain{
     height: 400px;
