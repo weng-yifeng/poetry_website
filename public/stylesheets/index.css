@@ -53,7 +53,7 @@ nav{
   border: none;
 }
 
-#login,#signUp{
+#login,#sign{
   font-size: 16px;
   float: right;
   padding: 5px;
@@ -63,6 +63,140 @@ nav{
   margin-right: 20px;
   border:1px solid gray;
 }
+
+/*注册模块部分开始*/
+#signUp{
+  /* visibility: hidden; */
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 316px;
+  border: 1px solid #767B84;
+  box-shadow: 3px 2px 2px #595959;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 15px;
+  position: absolute;
+  z-index: 9999;
+  background-color: white;
+}
+
+.sign-header{
+  margin-bottom: 35px;
+  background-color: #EDF1F5;
+  width: 400px;
+  height: 45px;
+  border-bottom:1px solid #CFD3D9;
+}
+
+
+.sign-header p{
+  color:#5E5D5C;
+  padding-top: 3px;
+  font-size: 25px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+
+/*#signUpContainer{*/
+  /*display: none;*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*color: #5E5D5C;*/
+/*}*/
+
+#signUpClose{
+  float: right;
+  width: 45px;
+  height: 50px;
+  margin: 8px 0 0 0;
+  font-size: 30px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+#signUpClose:hover{
+  font-size: 40px;
+  color: #D61F2D;
+  text-shadow: 1px 1px 1px #767B84;
+}
+
+
+#signUpBox{
+  width: 85%;
+}
+
+#signUpBox div{
+  margin-bottom: 8px;
+}
+
+#signUpBox input.text{
+  width: 180px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #BABABA;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+/* #screen{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9998;
+  opacity: 0.3;
+
+} */
+
+#tips{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: red;
+  font-size: 12px;
+}
+
+#signButton{
+  width: 75px;
+  height: 35px;
+  font-size: 16px;
+  color: black;
+  background-color: #E9E9E9;
+  border:1px solid #989898;
+  border-radius: 3px;
+  box-shadow: 0 1px 0.5px #767B84;
+  cursor: pointer;
+}
+
+#signButton:hover{
+  background-color: #F2F2F2;
+}
+
+.passwordP{
+  position: resize;
+}
+
+#passtips{
+  display: none;
+  position: absolute;
+  top: 143px;
+  left: 310px;
+  width: 22px;
+  height: 18px;
+  color: white;
+  background-color: red;
+  font-size: 13px;
+}
+/*注册模块部分结束*/
 
 /*导航部分结束*/
 

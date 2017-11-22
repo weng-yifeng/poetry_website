@@ -18,7 +18,8 @@
             <span id="searchBtn"></span>
             <input type="text" class="search">
         </div>
-        <span id="signUp">注册</span>
+
+        <span id="sign">注册</span>
         <span id="login">登录</span>
 
     </nav>
@@ -273,6 +274,45 @@
         <hr>
         <h1>我诗我在</h1>
     </footer>
+
+
+    <!-- 注册模块 -->
+    <div id='signUpContainer'>
+        <div id='signUp'>
+            <div class="sign-header">
+                <span id='signUpClose'>×</span>
+                <p>　 注 册</p>
+            </div>
+            <div id='signUpBox'>
+                <div>　用户名：
+                    <input id='user' class='text' type='text' name='user' value='' />
+                </div>
+                <div>　　邮箱：
+                    <input id='email' class='text' type='text' name='email' value='''/>
+                </div>
+                <div>　　密码：
+                    <input id='password' class='text' type="password" name="password" value=''/>
+                    <!-- 提示密码强度 -->
+                    <span id='passtips'>弱</span>
+                </div>
+                <div>确认密码：
+                    <input id='password2' class='text' type="password" name="password2" value='' />
+                </div>
+            </div>
+            <!-- 提示输入错误 -->
+            <p id='tips'>　</p>
+            <!-- 注册按钮 -->
+            <div>
+                <input id='signButton' type="button" name="button" value='注册'/>
+                <p>已有账号？点击这里登录</p>
+            </div>
+
+        </div>
+        <!-- 注册框弹出时背景变化 -->
+        <div id="screen"></div>
+    </div>
+
+
 
     <script type="text/javascript">
         var p = {
