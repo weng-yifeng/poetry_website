@@ -72,9 +72,10 @@ nav{
   left: 50%;
   transform: translate(-50%,-50%);
   width: 400px;
-  height: 316px;
+  height:360px;
   border: 1px solid #767B84;
-  box-shadow: 3px 2px 2px #595959;
+  box-shadow:0 0 6px #4C4C4C;
+  /*（水平方向，垂直方向，模糊程度）*/
   border-radius: 3px;
   text-align: center;
   font-size: 15px;
@@ -84,8 +85,8 @@ nav{
 }
 
 .sign-header{
-  margin-bottom: 35px;
-  background-color: #EDF1F5;
+  margin-top: 6px;
+  margin-bottom: 25px;
   width: 400px;
   height: 45px;
   border-bottom:1px solid #CFD3D9;
@@ -95,7 +96,7 @@ nav{
 .sign-header p{
   color:#5E5D5C;
   padding-top: 3px;
-  font-size: 25px;
+  font-size: 23px;
   line-height: 40px;
   margin-bottom: 30px;
 }
@@ -116,7 +117,7 @@ nav{
   width: 45px;
   height: 50px;
   margin: 8px 0 0 0;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 20px;
   cursor: pointer;
 }
@@ -127,23 +128,21 @@ nav{
   text-shadow: 1px 1px 1px #767B84;
 }
 
-
 #signUpBox{
   width: 85%;
-}
-
-#signUpBox div{
-  margin-bottom: 8px;
+  margin: 3px auto;
 }
 
 #signUpBox input.text{
-  width: 180px;
-  height: 18px;
-  line-height: 18px;
+  margin-top: 7px;
+  width:90%;
+  height: 30px;
+  line-height: 25px;
   border: 1px solid #BABABA;
-  border-radius: 3px;
-  padding-left: 10px;
+  /*border-radius: 3px;*/
 }
+
+
 
 /* #screen{
   display: block;
@@ -166,14 +165,14 @@ nav{
 }
 
 #signButton{
-  width: 75px;
+  width:75%;
   height: 35px;
   font-size: 16px;
   color: black;
   background-color: #E9E9E9;
   border:1px solid #989898;
-  border-radius: 3px;
-  box-shadow: 0 1px 0.5px #767B84;
+  /*border-radius: 3px;*/
+  /*box-shadow: 0 1px 0.5px #767B84;*/
   cursor: pointer;
 }
 
@@ -196,7 +195,21 @@ nav{
   background-color: red;
   font-size: 13px;
 }
-/*注册模块部分结束*/
+
+#signUpBox input::-webkit-input-placeholder { /* WebKit browsers */
+  color: #C8C8C8;
+}
+#signUpBox input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:#C8C8C8;
+}
+#signUpBox input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #C8C8C8;
+}
+#signUpBox input::-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #C8C8C8;
+}
+
+  /*注册模块部分结束*/
 
 /*导航部分结束*/
 
