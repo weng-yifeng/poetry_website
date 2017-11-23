@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var check_account = require('../middlewares/allowCrossDomain');
 
 /* 用户表 */
 var Users = mongoose.model('Users');
@@ -9,9 +10,17 @@ var Users = mongoose.model('Users');
 var allow_cross_domain = require('../middlewares/allowCrossDomain').allowCrossDomain;
 router.use(allow_cross_domain);
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+/* 获取首页信息 */
+router.get('/index_info', function(req, res, next) {
+  if (!req.session.user) {
+    res.json({
+      "message": '已登录',
+    })
+  } else {
+    res.json({
+      "message": '未登录',
+    })
+  }
 });
 
 /* 注册 */
