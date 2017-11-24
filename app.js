@@ -9,14 +9,17 @@ var bodyParser = require('body-parser');
 var mongoose = require('./config/mongoose');
 var db = mongoose();
 
+// 配置
+var config = require('config-lite')(__dirname);
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -25,6 +28,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  name: config.session.key, 
+  secret: config.session.secret,
+  resave: true,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: config.session.maxAge,
+  },
+  store: new MongoStore({
+    url: config.mongodb
+  })
+}));
 
 app.use('/', index);
 app.use('/users', users);
