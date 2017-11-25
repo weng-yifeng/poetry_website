@@ -284,14 +284,18 @@
                 <p>　 注 册</p>
             </div>
             <div id='signUpBox'>
-                    <input id='user' class='text' type='text' name='user' value='' placeholder="请输入用户名"/>
-                    <input id='email' class='text' type='text' name='email' value='' placeholder="请输入邮箱"/>
-                    <input id='password' class='text' type="password" name="password" value='' placeholder="请设置密码"/>
+                    <input id='user' class='sign_text' type='text' name='user' value='' placeholder="请输入用户名"/>
+                    <input id='email' class='sign_text' type='text' name='email' value='' placeholder="请输入邮箱"/>
+                    <input id='password' class='sign_text' type="password" name="password" value='' placeholder="请设置密码"/>
                     <!-- 提示密码强度 -->
                 <span id="passTips"></span>
-                    <input id='password2' class='text' type="password" name="password2" value='' placeholder="确认密码"/>
+                    <input id='password2' class='sign_text' type="password" name="password2" value='' placeholder="确认密码"/>
             <!-- 提示输入错误 -->
-            <p id='tips'>密码不一致</p>
+                <div id="tips">
+                    <i></i>
+                    <p></p>
+                </div>
+
             </div>
             <!-- 注册按钮 -->
             <div class="signBtn">

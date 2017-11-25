@@ -225,7 +225,42 @@ $(document).ready(function(e) {
 // 诗友大轮播图部分结束
 
 
+// 注册模块开始
+// 点击注册按钮
+$('#sign').on('click',function () {
+        $('#screen').show();
+        $('#signUpContainer').show();
+    });
+// 点击关闭按钮
+$('#signUpClose').on('click',function () {
+        $('#screen').hide();
+        $('#signUpContainer').hide();
+        $('#passTips').hide();
+        $('#tips').hide();
+        $('.sign_text').css('border','').val('');
+    });
+//各种验证正则匹配
+//字母数字下划线字符数4-15个字符
+    var pUser = /^(\w{4,15})$/;
+//邮件格式
+    var pEmail =/^([\w\.\-]+)@([\w\.\-]+)\.([\w]{2,4})$/;
+//任意8-16个字符
+    var pPass1=/^(.{8,16})$/;
+//声明用来赋值最后判断注册条件是否成立
+    var checkUser = 0;
+    var checkEmail = 0;
+    var checkPassword = 0;
+    var checkPassword2 = 0;
+// 用户名的验证，输入框失去焦点后判断
+$('#user').on('blur',function () {
+    if($('#user').val().length !== 0
+    && pUser.test($('#user').val()) == false) {
+        $('#tips').show();
+        $('p#tips').html('错误提示');
+    }
+})
 
+// 注册模块结束
 
 })
 

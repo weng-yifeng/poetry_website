@@ -64,10 +64,15 @@ nav{
   border:1px solid gray;
 }
 
+#login:hover,#sign:hover{
+  color: #3C89BD;
+  border:1px solid #3C89BD;
+  cursor: pointer;
+}
 /*注册模块部分开始*/
 
 #signUpContainer{
-  /*display: none;*/
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +140,7 @@ nav{
   margin: 0 auto;
 }
 
-#signUpBox input.text{
+.sign_text{
   margin-top: 7px;
   padding-left: 15px;
   width:calc(100% - 15px);
@@ -146,7 +151,8 @@ nav{
 }
 
 #passTips{
-  display: block;
+  display: none;
+  /*display: block;*/
   margin-top: 7px;
   width: 200px;
   height: 20px;
@@ -156,22 +162,33 @@ nav{
 }
 
 #tips{
-  /*display: none;*/
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: red;
-  font-size: 12px;
+  display: none;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 
-/*#tips：before{*/
-  /*!*display：none；*!*/
-  /*content: url(";*/
-/*}*/
+#tips p{
+  color: red;
+  font-size: 13px;
+  float: left;
+}
+
+#tips i{
+  margin-top: 1px;
+  margin-right: 3px;
+  width:15px;
+  height:15px;
+  background-image: url("../images/wrong.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  float: left;
+}
 
 #signButton{
-  margin-top: 15px;
-  margin-bottom: 10px;
-  width:71%;
+  margin: 15px auto 10px;
+  /*margin-top: 15px;*/
+  /*margin-bottom: 10px;*/
+  width:70%;
   height: 35px;
   font-size: 18px;
   color: white;
@@ -193,7 +210,8 @@ nav{
 }
 
 #screen{
-  display: block;
+  display: none;
+  /*display: block;*/
   position: absolute;
   top: 0;
   left: 0;
