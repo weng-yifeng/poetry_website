@@ -182,7 +182,7 @@ nav{
 #tips span{
   position: absolute;
   left:0;
-  top:-1px;
+  top:0;
   margin-top: 1px;
   margin-right: 3px;
   width:15px;
@@ -200,14 +200,16 @@ nav{
   height: 35px;
   font-size: 18px;
   color: white;
-  background-color: #80B136;
+  background-color: #6a6b69;
+          /*#80B136;*/
   border:1px solid #989898;
   cursor: pointer;
 }
 
-#signButton:hover{
-  background-color:#90CE55;
-}
+/*#signButton:hover{*/
+  /*background-color:#434343;*/
+          /*!*#90CE55;*!*/
+/*}*/
 
 .signBtn p{
   margin-top: 2px;
