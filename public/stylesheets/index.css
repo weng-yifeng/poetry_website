@@ -163,17 +163,26 @@ nav{
 
 #tips{
   display: none;
+  position: relative;
   margin-top: 15px;
   margin-bottom: 0px;
+  width:100%;
+  height:auto;
+  text-align: left;
 }
 
 #tips p{
+  width:95%;
+  padding-left: 20px;
   color: red;
   font-size: 13px;
-  float: left;
+  word-wrap:break-word; word-break:break-all;
 }
 
-#tips i{
+#tips span{
+  position: absolute;
+  left:0;
+  top:-1px;
   margin-top: 1px;
   margin-right: 3px;
   width:15px;
@@ -181,13 +190,12 @@ nav{
   background-image: url("../images/wrong.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  float: left;
 }
 
 #signButton{
-  margin: 15px auto 10px;
-  /*margin-top: 15px;*/
-  /*margin-bottom: 10px;*/
+  /*margin: 15px auto 10px;*/
+  margin-top: 15px;
+  margin-bottom: 10px;
   width:70%;
   height: 35px;
   font-size: 18px;

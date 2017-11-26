@@ -256,7 +256,6 @@ $('#user').on('blur',function () {
     if($('#user').val().length !== 0
     && pUser.test($('#user').val()) == false) {
         $('#tips').show();
-        $('p#tips').html('错误提示');
     }
 })
 
