@@ -249,8 +249,6 @@ $('#signUpClose').on('click',function () {
     var pUser = /^(\w{4,15})$/;
 //邮件格式
     var pEmail =/^([\w\.\-]+)@([\w\.\-]+)\.([\w]{2,4})$/;
-//任意8-16个字符
-    var pPass1=/^(.{8,16})$/;
 //声明用来赋值最后判断注册条件是否成立
     var checkUser = 0;
     var checkEmail = 0;
@@ -303,9 +301,48 @@ $('#signUpClose').on('click',function () {
     }
 });
 // 密码的验证，输入框失去焦点判断
+    var passTips = $('#passTips');
     var password = $("#password");
     password.on('blur',function () {
-
+        if(password.val().length !==0
+        && password.val().length < 6){
+            wrong(password,'密码必须大于6个字符');
+            checkPassword = 0;
+        } else if(password.val().length>16){
+            wrong(password,'密码必须小于16个字符');
+            checkPassword = 0;
+        } else if(password.val().length == 0 ){
+            righter(password);
+            checkPassword = 0;
+        } else if(password.val()>6
+            && password.val().length<9
+            && /\d/g.test(password.val()) == true
+            && /[a-z]/ig.test(password.val()) ==true){
+            righter(password);
+            passTips.show();
+            passTips.css({
+                'display':'block',
+                'background':'url("../images/zhong.png")',
+            });
+        }  else if(password.val()>9
+            && password.val().length<16
+            && /\d/g.test(password.val()) == true
+            && /[a-z]/g.test(password.val()) ==true
+            && /[A-Z]/g.test(password.val()) ==true){
+            righter(password);
+            passTips.show();
+            passTips.css({
+                'display':'block',
+                'background':'url("../images/qiang.png")',
+            });
+        } else{
+            righter(password);
+            passTips.show();
+            passTips.css({
+                'display':'block',
+                'background':'url("../images/ruo.png")',
+            });
+        }
 })
 
 

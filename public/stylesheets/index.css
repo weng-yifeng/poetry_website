@@ -40,7 +40,7 @@ nav{
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("../images/searchPic.png");
+  background: url("../images/searchPic.png");
   background-size: 100%;
   /*border:1px solid black;*/
   /*top:50%;*/
@@ -89,7 +89,6 @@ nav{
   left: 50%;
   transform: translate(-50%,-50%);
   width: 400px;
-  height:auto;
   border: 1px solid #767B84;
   box-shadow:0 0 6px #4C4C4C;
   /*（水平方向，垂直方向，模糊程度）*/
@@ -156,7 +155,7 @@ nav{
   margin-top: 7px;
   width: 200px;
   height: 20px;
-  background-image: url("../images/ruo.png");
+  background: url("../images/ruo.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -187,7 +186,7 @@ nav{
   margin-right: 3px;
   width:15px;
   height:15px;
-  background-image: url("../images/wrong.png");
+  background: url("../images/wrong.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -393,7 +392,7 @@ nav{
   height:100%;
   top:0;
   left:0;
-  background-image: url(../images/newest1.jpg);
+  background: url(../images/newest1.jpg);
   background-size: 100% 100%;
   opacity: 0.5;
   z-index: -1;
