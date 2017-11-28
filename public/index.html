@@ -280,8 +280,8 @@
     <div id='signUpContainer'>
         <div id='signUp'>
             <div class="sign-header">
-                <span id='signUpClose'>×</span>
-                <p>　 注 册</p>
+                <span id='signUpClose'></span>
+                <p>注 册</p>
             </div>
             <div id='signUpBox'>
                     <input id='user' class='sign_text' type='text' name='user' value='' placeholder="请输入用户名"/>
@@ -290,18 +290,16 @@
                     <!-- 提示密码强度 -->
                 <span id="passTips"></span>
                     <input id='password2' class='sign_text' type="password" name="password2" value='' placeholder="确认密码"/>
+            </div>
             <!-- 提示输入错误 -->
-                <div id="tips">
-                    <span></span>
-                    <p>dd</p>
-                </div>
-
+            <div id="tips">
+                <span></span>
+                <p>dd</p>
             </div>
             <!-- 注册按钮 -->
-            <div class="signBtn">
-                <input id='signButton' type="button" name="button" value='注册'/>
-                <p>已有账号？点击这里登录</p>
-            </div>
+            <input id='signButton' type="button" name="button" value='注册'/>
+
+            <p class="to-login">已有账号？点击这里登录</p>
 
         </div>
         <!-- 注册框弹出时背景变化 -->
