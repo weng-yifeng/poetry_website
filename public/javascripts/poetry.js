@@ -228,10 +228,10 @@ $(document).ready(function(e) {
 // 注册模块开始
 // 点击注册按钮
     var screen = $('#screen');
-    var signUpContainer = $('#signUpContainer');
+    var signLogin = $('#signLogin');
     $('#sign').on('click',function () {
         screen.show();
-        signUpContainer.show();
+        signLogin.show();
     });
 // 点击关闭按钮
     var passTips =  $('#passTips');
@@ -239,7 +239,7 @@ $(document).ready(function(e) {
     var sign_text = $('.sign_text');
 $('#signUpClose').on('click',function () {
     screen.hide();
-    signUpContainer.hide();
+    signLogin.hide();
     passTips.hide();
     tips.hide();
     sign_text.css('border','').val('');

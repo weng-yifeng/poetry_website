@@ -71,7 +71,7 @@ nav{
 }
 /*注册模块部分开始*/
 
-#signUpContainer{
+#signLogin{
   display: none;
   position: fixed;
   top: 0;
