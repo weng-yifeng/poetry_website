@@ -238,6 +238,23 @@ nav{
   color: #C8C8C8;
 }
 
+#tologin{
+  /* visibility: hidden; */
+  display: block;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid #767B84;
+  box-shadow:0 0 6px #4C4C4C;
+  /*（水平方向，垂直方向，模糊程度）*/
+  border-radius: 3px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 9999;
+  background-color: #fff;
+}
   /*注册模块部分结束*/
 
 /*导航部分结束*/
