@@ -17,8 +17,8 @@ nav{
   width: 100%;
   height:50px;
   line-height: 50px;
-  /*background-color:wheat;*/
   border-bottom: 1px solid gray;
+  /*background-color:wheat;*/
 }
 
 .left-word{
@@ -40,11 +40,9 @@ nav{
   display: inline-block;
   width: 20px;
   height: 20px;
+  transform: translateY(30%);
   background: url("../images/searchPic.png");
   background-size: 100%;
-  /*border:1px solid black;*/
-  /*top:50%;*/
-  transform: translateY(30%);
 }
 
 .search{
@@ -54,30 +52,30 @@ nav{
 }
 
 #login,#sign{
-  font-size: 16px;
-  float: right;
   padding: 5px;
+  margin-right: 20px;
+  float: right;
   line-height:13px;
   /*top:50%;*/
   transform: translateY(50%);
-  margin-right: 20px;
   border:1px solid gray;
+  font-size: 16px;
 }
 
 #login:hover,#sign:hover{
-  color: #3C89BD;
   border:1px solid #3C89BD;
+  color: #3C89BD;
   cursor: pointer;
 }
 /*注册模块部分开始*/
 
 #signLogin{
   display: none;
+  height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
   color: #5E5D5C;
   z-index: 4;
 }
@@ -91,9 +89,9 @@ nav{
   left: 50%;
   transform: translate(-50%,-50%);
   border: 1px solid #767B84;
+  border-radius: 3px;
   box-shadow:0 0 6px #4C4C4C;
   /*（水平方向，垂直方向，模糊程度）*/
-  border-radius: 3px;
   text-align: center;
   font-size: 15px;
   z-index: 9999;
@@ -126,10 +124,10 @@ nav{
 }
 
 #signUpClose:hover{
-  top: 10px;
-  right: 10px;
   width: 20px;
   height:20px;
+  top: 10px;
+  right: 10px;
 }
 
 #signUpBox{
@@ -140,19 +138,19 @@ nav{
 .sign_text{
   width:calc(100% - 15px);
   height: 30px;
-  margin-top: 7px;
-  padding-left: 15px;
-  font-size: 16px;
   line-height: 25px;
+  padding-left: 15px;
+  margin-top: 7px;
+  font-size: 16px;
   border: 1px solid #BABABA;
 }
 
 #passTips{
   display: none;
   /*display: block;*/
-  margin-top: 7px;
   width: 200px;
   height: 20px;
+  margin-top: 7px;
   background: url("../images/ruo.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -271,9 +269,9 @@ nav{
 }
 
 #writing{
-  margin: 10px auto;
-  padding: 5px;
   width: 65px;
+  padding: 5px;
+  margin: 10px auto;
   font-size: 18px;
   border-radius: 10px;
   background-color: #75D081;
@@ -283,19 +281,19 @@ nav{
 
 /*轮播图部分开始*/
 #imageCarousel {
-  margin: 20px auto;
   width: 88%;/* 900px; */
   height: 500px;
+  position: relative;
+  margin: 20px auto;
   /*border: 3px solid #333;*/
   overflow: hidden;
-  position: relative;
 }
 
 #pic {
   /* 7个图片尺寸900*7 */
-  position: absolute;
   width: 700%;  /* 6300px */
   height: 100%;
+  position: absolute;
   left: -100%;
   z-index: 1;
 }
@@ -305,9 +303,9 @@ nav{
 }
 
 #buttons {
-  position: absolute;
-  height:12.45%;
   width: 30%;
+  height:12.45%;
+  position: absolute;
   left: 35%;
   bottom: 5.5%;
   z-index: 2;
@@ -315,15 +313,15 @@ nav{
 
 #buttons span {
   display: inline-block;
-  cursor: pointer;
-  float: left;
-  top: 50%;
-  transform: translateY(-50%);
   width: 6%;
   height: 40%;
-  background: white;
-  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
   margin-left: 8.3%;
+  border-radius: 50%;
+  cursor: pointer;
+  float: left;
+  background: white;
   /* opacity: 0.7; */
 }
 
@@ -336,15 +334,15 @@ nav{
 }
 
 .arrow {
+  display: none;
   position: absolute;
+  top: 40%;
   z-index: 2;
   cursor: pointer;
-  display: none;
   text-decoration: none;
   text-align: center;
   font-size: 80px; /* 用媒体查询自适应 */
   font-weight: 900;
-  top: 40%;
   color: white;
   text-shadow:3px 3px 3px #162866;
   opacity: 0.7;
@@ -385,10 +383,10 @@ nav{
 }
 
 .contain li{
-  position: relative;
   display: inline-block;
   width: 20%;
   height: 50%;
+  position: relative;
   margin: 10px;
   border: 1px solid #839DB8;
   overflow: hidden;
@@ -397,10 +395,10 @@ nav{
 
 .contain li:before{
   content:"";
-  position: absolute;
   display: block;
   width: 100%;
   height:100%;
+  position: absolute;
   top:0;
   left:0;
   background: url(../images/newest1.jpg);
@@ -411,15 +409,15 @@ nav{
 
 .contain li:after{
   content:"阅读全诗";
-  position: absolute;
   display: block;
-  padding:5px;
-  font-size: 15px;
-  width: 100%;
+  position: absolute;
   bottom:0;
   left:0;
-  background-color: white;
+  padding:5px;
   border-top:1px solid #839DB8;
+  font-size: 15px;
+  width: 100%;
+  background-color: white;
 }
 
 .contain h2{
@@ -429,8 +427,8 @@ nav{
 }
 
 .contain h3{
-  font-size: 16px;
   margin-bottom: 5px;
+  font-size: 16px;
 }
 
 .contain p{
@@ -441,10 +439,10 @@ nav{
 
 .contain p:after{
   content:"";
-  position: absolute;
   display: block;
   width: 100%;
   height:100%;
+  position: absolute;
   top:0;
   left:0;
   background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
@@ -464,25 +462,26 @@ nav{
 
 /*推荐诗友轮播图部分开始*/
 .tuijian-run{
-  position: relative;
   width: 90%;
+  position: relative;
   margin:10px auto;
 }
 
 #imageCarousel_ul {
-  margin: 50px auto;
   width: 80%;
   height: 100px;
-  overflow: hidden;
   position: relative;
+  margin: 50px auto;
+  overflow: hidden;
+
   /*border: 1px solid red;*/
 }
 
 #tuijian {
   /* 7个图片尺寸900*7 */
-  position: absolute;
   width: 700%;  /* 6300px */
   height: 100%;
+  position: absolute;
   left: -100%;
   z-index: 1;
   /* text-align: center; */
@@ -513,15 +512,15 @@ nav{
 }
 
 .arrow-2 {
+  display: block;/* none;  */
   position: absolute;
+  top: 10%;
   z-index: 2;
   cursor: pointer;
-  display: block;/* none;  */
   text-decoration: none;
   text-align: center;
   font-size: 80px; /* 用媒体查询自适应 */
   font-weight: 900;
-  top: 10%;
   color: snow;
   text-shadow:3px 3px 3px #162866;
   opacity: 0.7;
@@ -549,8 +548,8 @@ footer{
 }
 
 footer hr{
-  margin-top: 50px;
   width:90%;
+  margin-top: 50px;
 }
 
 footer h1{
